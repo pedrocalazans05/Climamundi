@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
+@import 'variaveis.css';
+@import 'header.css';
+@import 'global.css';
+@import 'pesquisa.css';
+@import 'temperatura.css';
+@import 'fotter.css';
+@import 'atalho_mapa.css';
+@import 'atalho_conteudo.css';
+@import 'atalho_quiz.css';
+@import 'atalho_sobre.css';

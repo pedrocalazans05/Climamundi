@@ -1,0 +1,17 @@
+.container_footer{
+    height: 15vh;
+    background-color: rgb(204, 204, 204);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.links_foter{
+    list-style: none;
+}
+
+.link_footer{
+    text-decoration: none;
+    color: rgb(90, 90, 90);
+    margin-right: 15px;
+}

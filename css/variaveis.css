@@ -1,0 +1,15 @@
+:root{
+
+    /*Cores*/
+
+    --header_color:#357599;
+    --branco:#ffff;
+    --seta_baixo:#23ABD7;
+    --seta_cima:#CB3737;
+    --preto:#000;
+
+    /*Fontes*/
+    
+    --text: 'Inter', sans-serif;
+
+}

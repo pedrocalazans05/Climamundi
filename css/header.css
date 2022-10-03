@@ -1,0 +1,18 @@
+.main_div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--header_color);
+    color: var(--branco);
+    height: 65px;
+}
+
+.img_logo_header{
+    width: 80px;
+}
+
+.link_nav:link, .link_nav:visited{
+    text-decoration: none;
+    color: var(--branco);
+    padding: 0 10px;
+}

@@ -1,0 +1,29 @@
+.main_section_conteudo{
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 85vw;
+}
+
+.main_section_conteudo h2{
+    font-size: 6rem;
+}
+
+.main_section_conteudo p{
+    font-size: 1.5rem;
+    text-align: justify;
+    margin-block: 1.5rem;
+}
+
+.main_section_conteudo button{
+    margin-top: 1rem;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 11px;
+    padding: 15px;
+    width: 300px;
+    color: #fff;
+    background-color: var(--header_color);
+    cursor: pointer;
+}

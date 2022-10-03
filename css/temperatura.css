@@ -1,0 +1,40 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+    align-items: stretch;
+    margin-block: 4rem;
+
+}
+
+.cidade{
+    font-size: 6rem;
+    font-weight: lighter;
+}
+
+.container_temperatura{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-block: 4rem;
+}
+
+.numero{
+    font-size: 6rem;
+    font-weight: lighter;
+}
+
+.container_imagem{
+    margin-left: 8rem;
+}
+
+.descricao{
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.info{
+    display: flex;
+    justify-content: space-evenly;
+}

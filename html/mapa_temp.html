@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel='stylesheet' type='text/css' href='https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.20.0/maps/maps.css'>
+    <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.20.0/maps/maps-web.min.js"></script>
+    <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.20.0/services/services-web.min.js"></script>
+    <title>Mapa</title>
+
+    <style>
+        #map {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+
+        #container_menu {
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            width: fit-content;
+            border-radius: 5px;
+            top: 0;
+            right: 0;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+
+        #container_menu label {
+            border-bottom: 1px solid #ccc;
+            padding: 5px;
+        }
+
+        #container_menu input {
+            margin-right: 5px;
+        }
+
+        #voltar {
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin-top: 10px;
+            margin-left: 10px;
+            background-color: #fff;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+        }
+
+        #voltar img {
+            width: 32px;
+            margin: 8px;
+        }
+
+        a:link,
+        a:visited {
+            color: #000;
+            text-decoration: none;
+        }
+
+        a:link:active,
+        a:visited:active {
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="map"></div>
+    <div id="voltar"><img src="../assets/back_89271.png" alt="" onclick="goback()"></div>
+    <div id="container_menu">
+        
+        <label><a href="../html/mapa_temp.html"><input type="radio" name="a" id="temperatura" checked>Temperatura</a></label>
+        <label><a href="../html/mapa_chuva.html"><input type="radio" name="a" id="chuva">Chuva</a></label>
+        <label><a href="../html/mapa_vento.html"><input type="radio" name="a" id="vento">Vento</a></label>
+        <label><a href="../html/mapa_nuvem.html"><input type="radio" name="a" id="nuvens">Nuvem</a></label>
+
+    </div>
+
+    <script>
+
+        function goBack() {
+            window.history.back()
+        }
+
+        let map = tt.map({
+            key: 'ZLcibu8ri3GhmA1GakjbZkV6BOPxmkZw',
+            container: 'map',
+            zoom: 2,
+            language: 'pt-BR'
+        })
+
+        let tempSource = {
+            type: 'raster',
+            tiles: ['https://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid=9c80ca3b336609156aa76e82cee1d9d6'],
+            tileSize: 256,
+            minZoom: 0,
+            maxZoom: 12,
+            atribute: 'OpenWeatherMap.Org'
+        }
+
+        let tempLayer = {
+            'id': 'temp_layer',
+            'type': 'raster',
+            'source': 'temp_source',
+            'layout': { 'visibility': 'visible' }
+        }
+
+        map.on('load', function () {
+
+            map.addSource('temp_source', tempSource)
+            map.addLayer(tempLayer)
+
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+.main_section_mapa{
+    height: 115vh;
+    background: url("../assets/img_mapa.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+}
+
+
+
+.container_texto_mapa h2{
+    color: #fff;
+    filter: none; 
+    font-size: 6rem;
+}
+
+.container_texto_mapa p {
+    color: #fff;
+    filter: none;
+    font-size: 1.5rem;
+}
+
+.container_texto_mapa button { 
+    margin-top: 1rem;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 11px;
+    padding: 15px;
+    width: 300px;
+    color: #fff;
+    background-color: var(--header_color);
+    cursor: pointer;
+    filter: none;
+}
+
+/*
+    
+*/
